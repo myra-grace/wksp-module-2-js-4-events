@@ -99,6 +99,12 @@ All DOM nodes have methods we can use to _notify_ us of an event.
 
 ```js
 // Example
+const button = document.getElementById('btn');
+function handleOuch = function() {
+    console.log('ouch!');
+}
+button.addEventListener('click', handleOuch);
+button.removeEventListener('click', handleOuch); 
 
 ```
 

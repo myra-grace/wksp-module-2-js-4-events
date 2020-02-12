@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ````MENU```` make display none later -->
+    <div class="menu">
+      <ul class="menu-buttons">
+        <li><button class="start-game">Start game</button></li>
+        <li><button class="instructions">Instructions</button></li>
+      </ul>
+      <p class="instructions-pop-up">
+        Two players wait for a signal to start after a random delay. Once the
+        start signal, first person to press their key wins. If a player presses
+        before the signal appears, they lose. Player one presses the q key and
+        player 2 presses the p key.
+        <br />
+        <button class="ok">Okay!</button>
+      </p>
+    </div>
+    <!-- ````IN GAME```` -->
+    <div class="game">
+      <div class="characters">
+        <div class="kirby">
+          <img class="kirby-standby" src="imgs/p1.gif" alt="Kirby" />
+        </div>
+        <div class="sonic">
+          <img class="sonic-standby" src="imgs/p2.gif" alt="Sonic" />
+        </div>
+      </div>
+      <div class="prize-container"></div>
+      <div class="score"></div>
+    </div>
+    <!-- ```WIN``` -->
+    <div class="win"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
