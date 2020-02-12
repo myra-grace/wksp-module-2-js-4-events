@@ -15,3 +15,32 @@
 
 // Challenge
 // Make the countdown live...
+
+let ifClicked = false;
+let result = document.querySelector('.result')
+
+let randomNum = Math.floor(Math.random()*5000);
+
+let time = document.getElementById('time');
+time.innerText = `${randomNum/1000}`;
+
+let body = document.querySelector('body');
+body.style.margin = '0';
+body.style.padding = '0';
+body.style.height = '100vh';
+body.style.width = '100vw';
+
+function hasClicked() {
+    ifClicked = true;
+    result.innerText = 'You win! 🎉'
+    body.removeEventListener('click', hasClicked);
+}
+
+setTimeout (function() {
+    if (ifClicked === false) {
+        result.innerText = 'You lose 😵';
+        body.removeEventListener('click', hasClicked);
+    }
+}, randomNum);
+
+body.addEventListener('click', hasClicked);

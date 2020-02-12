@@ -9,3 +9,8 @@
 // OPTIONAL
 // Feel free to add some CSS to this once you're done
 // --------------------------------------------------
+
+let click = document.querySelector('body');
+click.addEventListener('mousedown', () => {
+    alert('You clicked!');
+});
